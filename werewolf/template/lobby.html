@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    Here is a Main Lobby For this Game. {{ test }}
+</h1>
+<h2>Check the existing games here</h2>
+
+<table>
+  <tr>
+    <th>房间号</th>
+    <th>创建者 Alias</th>
+    <th>已参加人数</th>
+  </tr>
+
+
+
+
+
+</table>
+<br>
+
+
+
+
+
+
+<form action="/">
+    <input type="submit" value="Refresh">
+</form>
+<br><br><br><br>
+
+
+<form action="{% url 'create' %}">
+    <h2><b>创建游戏</b></h2>
+    输入您的Alias:
+    <input type="text" name="alias">
+    <br><br>
+    <input type="submit" value="创建">
+</form>
+<br><br>
+
+
+<form action="{% url 'signin' %}">
+
+    <h2><b>进入游戏</b></h2>
+    输入房间号: <br>
+    <input type="text" name="roomid"><br><br>
+
+    输入您的Alias:<br>
+    <input type="text" name="alias">
+    <br><br>
+
+    <input type="submit" value="进入房间"><br>
+
+
+</form>
+
+
+</body>
+</html>
