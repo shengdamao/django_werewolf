@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<div class="container">
 <h1>
     Here is a Main Lobby For this Game.
 </h1>
@@ -67,15 +69,33 @@
 
 
 <form action="{% url 'create' %}">
-    <h2><b>创建游戏</b></h2>
-    输入您的Alias:
-    <input type="text" name="alias">
-    MasterKey (删除房间用）
-    <input type="text" name="key">
-    Password (Optional）
-    <input type="text" name="pwd">
-    <br><br>
-    <input type="submit" value="创建">
+    <div class="form-group">
+        <label >输入您的Alias</label>
+        <input type="text" class="form-control" name="alias" >
+        <small id="emailHelp" class="form-text text-muted">您可以任意填写，这不是账户</small>
+    </div>
+    <div class="form-group">
+        <label >MasterKey</label>
+        <input type="password" class="form-control" name="key">
+        <small id="emailHelp" class="form-text text-muted">用来删除您创建的房间</small>
+    </div>
+    <div class="form-group">
+        <label >房间密码</label>
+        <input type="password" class="form-control" name="key">
+        <small id="emailHelp" class="form-text text-muted">选填，为空则无密码</small>
+    </div>
+
+
+
+<!--    <h2><b>创建游戏</b></h2>-->
+<!--    输入您的Alias:-->
+<!--    <input type="text" name="alias">-->
+<!--    MasterKey (删除房间用）-->
+<!--    <input type="text" name="key">-->
+<!--    Password (Optional）-->
+<!--    <input type="text" name="pwd">-->
+<!--    <br><br>-->
+    <input type="submit" class="btn btn-primary" value="创建">
 </form>
 <br><br>
 
@@ -94,6 +114,6 @@
 
 </form>
 
-
+</div>
 </body>
 </html>
